@@ -1,14 +1,16 @@
 import React from 'react';
 import Ellipse from '@/public/Ellipse.png'
 import Image from 'next/image';
+import { FaStar } from 'react-icons/fa';
 
 const Profile = () => {
     return (
         <main className='md:absolute top-28 w-9/12'>
-           <div className='bg-[#1E2875] rounded-md px-10 text-white md:h-56'>
+           <section className='bg-[#1E2875] rounded-md px-10 text-white md:h-56'>
                 <p className='py-4'>My Profile</p>
-           </div>
-           <div className='bg-white rounded-lg shadow-md md:p-8 p-4 -mt-16 w-10/12 mx-auto'>
+           </section>
+           <div className='bg-white rounded-lg shadow-md md:p-8 p-4 -mt-16 w-11/12 mx-auto grid grid-cols-7 md:gap-12 gap-4'>
+             <section className='col-span-4'>
              <div className='flex justify-between items-center'>
                 <Image src={Ellipse} alt="user image"></Image>
                 <button className="btn normal-case">Upload Photo</button>
@@ -54,6 +56,25 @@ const Profile = () => {
                         <li>Typescript</li>
                     </ul>
                 </div>
+             </section>
+             <section className='col-span-3'>
+                <div className='flex items-center justify-between gap-10 p-4 border shadow-md rounded-md'>
+                    <div>
+                    <h6>Professional Details</h6>
+                    <p>This are the professional details shown to users in the app.</p>
+                    </div>
+                    <div className='relative'>
+                    <FaStar className='text-6xl transform rotate-12 text-[#2684FC]'/>
+                    <FaStar className='text-4xl transform -rotate-3 text-[#413B89] absolute top-7 right-2'/>
+                    </div>
+                </div>
+                <div></div>
+                <div></div>
+                <div></div>
+             </section>
+           </div>
+           <div>
+            
            </div>
         </main>
     );

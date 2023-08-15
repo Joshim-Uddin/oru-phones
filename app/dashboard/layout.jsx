@@ -40,9 +40,9 @@ const layout = ({children}) => {
           <label htmlFor="my-drawer-2" className="drawer-overlay"></label> 
           <ul className="menu p-4 md:w-64 w-56 h-full bg-base-200 text-base-content">
             {/* Sidebar content here */}
-            <li className='ps-8 py-2 bg-gray-50 rounded-md mb-5'>Dashboard</li>
-            <div className='flex items-center w-full mb-4'><BsChevronRight /><li className='rounded-md w-11/12 hover:border hover:border-black'><Link href="/dashboard/profile" >My Profile</Link></li></div>
-            <div className='flex items-center w-full'><BsChevronRight /><li className='rounded-md w-11/12 hover:border hover:border-black'><Link href="/dashboard/connections">My Connections</Link></li></div>
+            <li className='ps-8 py-2 text-xl bg-gray-50 rounded-md mb-5'>Dashboard</li>
+            <div className='flex items-center w-full mb-4'><BsChevronRight /><li className='text-[#1A1558] text-xl rounded-md w-11/12 hover:border hover:border-black'><Link href="/dashboard/profile" >My Profile</Link></li></div>
+            <div className='flex items-center w-full'><BsChevronRight /><li className='text-[#1A1558] text-xl rounded-md w-11/12 hover:border hover:border-black'><Link href="/dashboard/connections">My Connections</Link></li></div>
           </ul>
         
         </div>
