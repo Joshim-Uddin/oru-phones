@@ -36,15 +36,19 @@ const layout = ({children}) => {
           {children}
         
         </div> 
-        <div className="drawer-side">
+        <div className="drawer-side h-fit">
           <label htmlFor="my-drawer-2" className="drawer-overlay"></label> 
-          <ul className="menu p-4 md:w-64 w-56 h-full bg-base-200 text-base-content">
+          <ul className="menu relative p-4 md:w-64 w-56 h-full bg-base-200 text-base-content">
             {/* Sidebar content here */}
             <li className='ps-8 py-2 text-xl bg-gray-50 rounded-md mb-5'>Dashboard</li>
             <div className='flex items-center w-full mb-4'><BsChevronRight /><li className='text-[#1A1558] text-xl rounded-md w-11/12 hover:border hover:border-black'><Link href="/dashboard/profile" >My Profile</Link></li></div>
             <div className='flex items-center w-full'><BsChevronRight /><li className='text-[#1A1558] text-xl rounded-md w-11/12 hover:border hover:border-black'><Link href="/dashboard/connections">My Connections</Link></li></div>
-          </ul>
+            <div className='absolute bottom-2'>
+            <button className="btn">Log Out</button>
+          </div>
         
+          </ul>
+          
         </div>
       </div>
     );
