@@ -16,11 +16,9 @@ const Suggestion = () => {
                     <button className="bg-violet-400 text-white rounded-md p-1 min:h-3 normal-case">Connect</button>
                     </div>
                 </div>
-                
                     <figure>
                         <Image src={image} alt="Image"></Image>
                     </figure>
-                
             </div>
             </div>
         </section>

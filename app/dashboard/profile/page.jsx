@@ -9,7 +9,7 @@ const Profile = () => {
     return (
         <main className='md:absolute md:top-28 top-32 md:w-9/12 w-11/12 mx-auto'>
            <section className='bg-[#1E2875] rounded-md px-10 text-white md:h-56 h-24'>
-                <p className='py-4'>My Profile</p>
+                <p className='text-xl py-4'>My Profile</p>
            </section>
            <div className='bg-white rounded-lg shadow-md md:p-8 p-4 md:-mt-16 -mt-8 w-11/12 mx-auto grid md:grid-cols-2 grid-cols-1 md:gap-12 gap-4'>
              <section className='flex flex-col md:gap-8 gap-3'>
