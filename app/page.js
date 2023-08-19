@@ -3,8 +3,12 @@
 import Link from "next/link";
 import RegisterAnimation from "./components/loginAnimation";
 import LoginAnimation from "./components/loginAnimation";
+import { useContext } from "react";
+import { AuthContext } from "./context/AuthContext";
 
 export default function Home() {
+  const {user} = useContext(AuthContext)
+  console.log(user)
   const handleSubmit=()=>{
 
   }

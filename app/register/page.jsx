@@ -1,12 +1,25 @@
 'use client'
-import React from 'react';
-import RegisterAnimation from '../components/registerAnimation';
-import Image from 'next/image';
-import profile from '@/public/profile.png';
+import React, { useContext } from 'react';
+import { AuthContext } from '../context/AuthContext';
+import Swal from 'sweetalert2';
+
 
 const page = () => {
-    const handleRegister =()=> {
-
+  const {signUp, user, setUser} = useContext(AuthContext)
+    const handleRegister =(e)=> {
+      e.preventDefault()
+      const form = e.target;
+      const email = form.email.value;
+      const password = form.password.value;
+      signUp(email, password).then(res=>{
+        const user = res.user;
+        Swal.fire({
+          icon: 'success',
+          title: 'Registered Successfully',
+          showConfirmButton: false,
+          timer: 1500
+        })
+      }).catch(err=>console.log(err))
     }
     return (
           <div className="hero min-h-screen bg-base-200">
@@ -40,7 +53,7 @@ const page = () => {
                   <label className="label">
                     <span className="label-text">Password</span>
                   </label>
-                  <input type="text" placeholder="password" className="input input-bordered" />
+                  <input type="password" name='password' placeholder="password" className="input input-bordered" />
                 </div>
                 <div className="form-control">
                   <label className="label">
@@ -67,7 +80,7 @@ const page = () => {
                   <label className="label">
                     <span className="label-text">Session</span>
                   </label>
-                  <input type="email" name='session' placeholder="session" className="input input-bordered" />
+                  <input type="text" name='session' placeholder="session" className="input input-bordered" />
                 </div>
                 <div className="form-control">
                   <label className="label">
