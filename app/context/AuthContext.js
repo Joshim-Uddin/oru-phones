@@ -13,6 +13,7 @@ const AuthContextProvider = ({children}) => {
         setLoading(true)
         return createUserWithEmailAndPassword(auth, email, password)
     }
+   
     useEffect(()=>{
         const unsubscribe = onAuthStateChanged(auth, (currentUser)=>{
             setUser(currentUser)
