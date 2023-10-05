@@ -12,7 +12,7 @@ const page = () => {
             <section className='grid md:grid-cols-3 grid-cols-1 p-3 gap-4'>
             <div className="rounded-md border bg-base-100 shadow-xl flex justify-between items-center">
                 <div className="card-body gap-1">
-                    <h2 className="card-title">Joshim Uddin</h2>
+                    <h2 className="card-title">Joshim Uddin Mondol</h2>
                     <p>Full Stack Developer</p>
                     <p>@oruphones</p>
                     <div className="card-actions justify-start">
